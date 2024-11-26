@@ -4,23 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>적분 계산기</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        label, input, button {
+            display: block;
+            margin: 10px auto;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>적분 계산기</h1>
-    <form method="POST">
-        <label>함수 입력 (f(x)): </label>
-        <input type="text" name="function" required>
-        <br>
-        <label>구간 시작 (x): </label>
-        <input type="number" name="x_start" required>
-        <br>
-        <label>구간 끝 (x): </label>
-        <input type="number" name="x_end" required>
-        <br>
-        <button type="submit">계산</button>
-    </form>
-    {% if result %}
-    <h2>결과: {{ result }}</h2>
-    {% endif %}
+    <div class="container">
+        <h1>적분 계산기</h1>
+        <form method="POST">
+            <label>함수 입력 (f(x)): </label>
+            <input type="text" name="function" required>
+            <br>
+            <label>구간 시작 (x): </label>
+            <input type="number" name="x_start" required>
+            <br>
+            <label>구간 끝 (x): </label>
+            <input type="number" name="x_end" required>
+            <br>
+            <button type="submit">계산</button>
+        </form>
+        {% if result %}
+        <h2>결과: {{ result }}</h2>
+        {% endif %}
+    </div>
 </body>
 </html>
+
