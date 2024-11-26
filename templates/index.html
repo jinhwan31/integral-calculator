@@ -1,9 +1,10 @@
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>적분 계산기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             display: flex;
@@ -11,42 +12,72 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            font-family: 'Poppins', sans-serif;
         }
 
         .container {
             text-align: center;
             padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            width: 300px;
+            border: 2px solid #4CAF50;
+            border-radius: 15px;
+            width: 320px;
+            background-color: #ffffff;
         }
 
         h1 {
+            color: #4CAF50;
             margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 600;
         }
 
         label, input, button {
             display: block;
             margin: 10px auto;
+            font-size: 16px;
+            width: 80%;
+            text-align: center;
+        }
+
+        input[type="text"], input[type="number"] {
+            padding: 8px;
+            font-size: 16px;
+            width: 90%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #888;
+            margin-top: -10px;
         }
 
         button {
-            padding: 10px 20px;
+            padding: 12px 20px;
             background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
             background-color: #45a049;
         }
 
-        .description {
-            font-size: 0.9em;
-            color: #666;
+        h2 {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
         }
 
     </style>
@@ -74,5 +105,6 @@
     </div>
 </body>
 </html>
+
 
 
